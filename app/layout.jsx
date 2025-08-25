@@ -3,6 +3,7 @@ import "./globals.css";
 //components
 import MainNav from "@/components/MainNav";
 import PageTransition from "@/components/PageTransition";
+import RectangleTransition from "@/components/RectangleTransition";
 
 const sometypeMono = Sometype_Mono({
   variable: "--font-sometypeMono",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${sometypeMono.variable} antialiased`}>
+        <RectangleTransition />
         <PageTransition>
           <div className="flex">
             {/* main nav */}
