@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${sometypeMono.variable} antialiased`}>
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );

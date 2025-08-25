@@ -67,3 +67,7 @@ body {
 .btn-tertiary {
   @apply bg-tertiary hover:bg-tertiary-hover;
 }
+
+.btn-white {
+  @apply bg-white hover:bg-white/90 text-primary;
+}
