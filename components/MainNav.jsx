@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 const MainNav = () => {
   return (
     <nav>
-      <NavLinks />
+      <NavLinks containerStyles="flex flex-col gap-6" />
     </nav>
   );
 };

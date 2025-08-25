@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const links = [
@@ -17,10 +18,24 @@ const links = [
     name: "work",
     path: "/work",
   },
+  {
+    name: "contact",
+    path: "/contact",
+  },
 ];
 
-const NavLinks = () => {
-  return <ul>nav links</ul>;
+const NavLinks = ({ containerStyles }) => {
+  return (
+    <ul className={containerStyles}>
+      {links.map((link, index) => {
+        return (
+          <Link href={link.path} key={index}>
+            {link.name}
+          </Link>
+        );
+      })}
+    </ul>
+  );
 };
 
 export default NavLinks;
