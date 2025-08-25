@@ -1,5 +1,7 @@
 import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
+//components
+import MainNav from "@/components/MainNav";
 
 const sometypeMono = Sometype_Mono({
   variable: "--font-sometypeMono",
@@ -15,7 +17,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${sometypeMono.variable} antialiased`}>
-        <div>{children}</div>
+        <div className="flex">
+          {/* main nav */}
+          <div className="hidden 2xl:flex w-[285px] h-screen bg-secondary">
+            <MainNav />
+          </div>
+          <div className="w-full max-w-[1130px] px-[15px] mx-auto bg-pink-50/10">
+            <header>header</header>
+            <div>{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
