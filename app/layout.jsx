@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${sometypeMono.variable} antialiased`}>
+      <body
+        className={` ${sometypeMono.variable} antialiased overflow-hidden relative`}
+      >
         <RectangleTransition />
         <PageTransition>
           <div className="flex">
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
             <div className="hidden 2xl:flex w-[285px] h-screen bg-secondary">
               <MainNav />
             </div>
-            <div className="w-full max-w-[1130px] px-[15px] mx-auto bg-pink-50/10">
+            <div className="w-full max-w-[1130px] px-[15px] mx-auto">
               <header>header</header>
               <div>{children}</div>
             </div>
