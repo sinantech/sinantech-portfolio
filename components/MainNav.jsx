@@ -1,7 +1,12 @@
 import React from "react";
+import NavLinks from "./NavLinks";
 
 const MainNav = () => {
-  return <div>main nav</div>;
+  return (
+    <nav>
+      <NavLinks />
+    </nav>
+  );
 };
 
 export default MainNav;
