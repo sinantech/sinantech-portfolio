@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 // Components
+import Image from "next/image";
 import Blob from "@/components/Blob";
-
+import avatarImg from "@/public/assets/avatar.png";
 const Home = () => {
   return (
     <motion.section
@@ -18,7 +19,18 @@ const Home = () => {
         <div className="w-full xl:w-[550px]">text</div>
         <div className="hidden xl:block flex-1 relative z-20">
           {/* blob */}
-          <Blob />
+          <Blob containerStyles="w-[560px] h-[560px]" />
+          {/* avatar image */}
+          <Image
+            src={avatarImg}
+            alt=""
+            width={440}
+            height={600}
+            quality={100}
+            className="absolute -top-16 left-[120px]"
+          />
+          {/* overlay gradient */}
+          <div className="w-full h-[164px] bg-pink-50/10 absolute bottom-0 left-0 right-0"></div>
         </div>
       </div>
     </motion.section>
