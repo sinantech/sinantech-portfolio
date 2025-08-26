@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+// Components
+import Blob from "@/components/Blob";
 
 const Home = () => {
   return (
@@ -14,8 +16,10 @@ const Home = () => {
     >
       <div className="flex flex-col xl:flex-row items-center justify-between w-full">
         <div className="w-full xl:w-[550px]">text</div>
-        <div className="hidden xl:block flex-1 relative z-20">image</div>
-        {/* blob */}
+        <div className="hidden xl:block flex-1 relative z-20">
+          {/* blob */}
+          <Blob />
+        </div>
       </div>
     </motion.section>
   );
