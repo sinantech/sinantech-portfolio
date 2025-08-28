@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
+//components
+import Stats from "@/components/Stats";
+
 const about = () => {
   return (
     <motion.section
@@ -36,6 +39,13 @@ const about = () => {
                 seamlessly, ensuring every detail is carefully designed and
                 executed.
               </p>
+              <div className="flex flex-col items-start gap-16">
+                <Stats />
+                <div>testimonial</div>
+                <div>info</div>
+                <div>journey</div>
+                <div>skills</div>
+              </div>
             </div>
           </ScrollArea>
         </div>
