@@ -4,7 +4,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //import swiper required modules
-import { autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 //import swiper styles
 import "swiper/css";
@@ -30,7 +30,26 @@ const testimonial = [
 ];
 
 const Testimonial = () => {
-  return <div>Testimonial</div>;
+  return (
+    <Swiper
+      //modules={[Autoplay]}
+      loop={false}
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
+      className="w-full max-w-[310px] md:max-w-[520px] bg-secondary rounded-lg"
+    >
+      {testimonial.map((person, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <div>
+              <ImQuotesLeft className="hidden xl:flex text-8xl text-accent" />
+            </div>
+            <p>{person.message}</p>
+            <p>{person.name}</p>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
+  );
 };
 
 export default Testimonial;
