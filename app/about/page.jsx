@@ -6,6 +6,7 @@ import Image from "next/image";
 
 //components
 import Stats from "@/components/Stats";
+import Testimonial from "@/components/Testimonial";
 
 const about = () => {
   return (
@@ -41,7 +42,7 @@ const about = () => {
               </p>
               <div className="flex flex-col items-start gap-16">
                 <Stats />
-                <div>testimonial</div>
+                <Testimonial />
                 <div>info</div>
                 <div>journey</div>
                 <div>skills</div>
