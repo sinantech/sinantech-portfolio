@@ -19,7 +19,7 @@ const Stats = () => {
         </div>
         <span>
           Clients <br />
-          worldwide
+          Worldwide
         </span>
       </div>
     </div>
