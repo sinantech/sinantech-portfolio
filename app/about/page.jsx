@@ -8,6 +8,7 @@ import Image from "next/image";
 import Stats from "@/components/Stats";
 import Testimonial from "@/components/Testimonial";
 import Info from "@/components/Info";
+import Journey from "@/components/Journey";
 
 const about = () => {
   return (
@@ -45,7 +46,7 @@ const about = () => {
                 <Stats />
                 <Testimonial />
                 <Info />
-                <div>journey</div>
+                <Journey />
                 <div>skills</div>
               </div>
             </div>
