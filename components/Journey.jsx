@@ -24,7 +24,7 @@ const Journey = () => {
         Education & <span className="text-accent">Experience</span>
       </h2>
       {journey.map((item, index) => {
-        const { instituion, role, years } = item;
+        const { institution, role, years } = item;
         return (
           <div key={index} className="flex items-center gap-12 w-full">
             {/* bullets */}
@@ -36,7 +36,7 @@ const Journey = () => {
             <div className="max-wa-[500px]">
               <p className="mb-p text-lg text-white/50">{years}</p>
               <h4 className="h4 mb-2">{role}</h4>
-              <p className="text-lg text-white/50">{instituion}</p>
+              <p className="text-lg text-white/50">{institution}</p>
             </div>
           </div>
         );
