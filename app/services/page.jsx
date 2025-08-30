@@ -79,9 +79,15 @@ const services = () => {
             return (
               <SwiperSlide key={index}>
                 <div className="bg-secondary/90 w-full h-[284px] px-[30px] py-[40px] flex flex-col justify-between ">
-                  <div>
+                  <div className="flex items-center justify-between mb-12">
                     <Image src={item.icon} width={48} height={48} alt="" />
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center cursor-pointer text-2xl hover:rotate-45 transition-all">
+                      <MdOutlineArrowOutward />
+                    </div>
                   </div>
+                  <h2 className="text-[22px] font-medium max-w-[240px]">
+                    {item.title}
+                  </h2>
                 </div>
               </SwiperSlide>
             );
