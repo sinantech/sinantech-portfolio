@@ -52,13 +52,41 @@ const services = () => {
     >
       <div className="container mx-auto w-full flex flex-col gap-16">
         {/* text */}
-        <div>
-          <h2>
-            Custom <span>Web Solutions</span>to Boost Your Business
+        <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8">
+          {/* headline */}
+          <h2 className="h2 max-w-[480px] text-left xl:mb-0">
+            Custom <span className="text-accent">Web Solutions</span>to Boost
+            Your Business
           </h2>
+          {/* btn */}
+          <button className="btn btn-lg btn-accent flex gap-2">
+            All Services <MdArrowRightAlt />
+          </button>
         </div>
         {/* slider */}
-        <div>slider</div>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          modules={[Pagination]}
+          pagination={{ clickable: true, dynamicBullets: true }}
+          className="h-[320px]"
+        >
+          {service.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="bg-secondary/90 w-full h-[284px] px-[30px] py-[40px] flex flex-col justify-between ">
+                  <div>
+                    <Image src={item.icon} width={48} height={48} alt="" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </motion.section>
   );
