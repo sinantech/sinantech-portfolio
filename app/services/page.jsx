@@ -48,8 +48,18 @@ const services = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
+      className="h-screen flex items-center"
     >
-      services
+      <div className="container mx-auto w-full flex flex-col gap-16">
+        {/* text */}
+        <div>
+          <h2>
+            Custom <span>Web Solutions</span>to Boost Your Business
+          </h2>
+        </div>
+        {/* slider */}
+        <div>slider</div>
+      </div>
     </motion.section>
   );
 };
