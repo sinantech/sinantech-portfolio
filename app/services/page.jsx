@@ -55,7 +55,7 @@ const services = () => {
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8">
           {/* headline */}
           <h2 className="h2 max-w-[480px] text-left xl:mb-0">
-            Custom <span className="text-accent">Web Solutions</span>to Boost
+            Custom <span className="text-accent">Web Solutions</span> to Boost
             Your Business
           </h2>
           {/* btn */}
