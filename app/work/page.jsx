@@ -156,7 +156,57 @@ const work = () => {
                     {projects
                       .filter((project) => project.category === category)
                       .map((project) => {
-                        return <SwiperSlide>{project.title}</SwiperSlide>;
+                        return (
+                          <SwiperSlide key={project.id} className="h-full">
+                            <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
+                              {/* project info */}
+                              <div className="w-full max-w-[300px] flex flex-col gap-6 xl:gap-8 xl:pt-6 order-2 xl:order-none">
+                                {/* title */}
+                                <h3 className="h3">{project.title}</h3>
+                                {/* tech */}
+                                <div className="xl:mb-4 max-w-[300px] min-h-[130px]">
+                                  <p className="mb-4">Technologies Used</p>
+                                  <ul className="flex flex-wrap gap-4">
+                                    {project.tech.map((item, index) => {
+                                      return (
+                                        <li
+                                          key={index}
+                                          className="flex items-center gap-4 bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full"
+                                        >
+                                          {item}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                                {/* btns */}
+                                <div>
+                                  <Link href={project.link}>
+                                    <button className="btn btn-sm btn-accent flex gap-2">
+                                      <MdArrowOutward className="text-xl" />
+                                      <span>Live Project</span>
+                                    </button>
+                                  </Link>
+                                  <Link href={project.github}>
+                                    <button className="btn btn-sm btn-white flex gap-2">
+                                      <FaGithub className="text-xl" />
+                                      <span>Github Repo</span>
+                                    </button>
+                                  </Link>
+                                </div>
+                              </div>
+                              {/* project img */}
+                              <div className="w-full h-[200px] md:h-[300px] xl:h-[400px] relative bg-pink-50/10 order-1 xl:order-none rounded-lg overflow-hidden">
+                                <Image
+                                  src={project.image}
+                                  alt={project.image}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                            </div>
+                          </SwiperSlide>
+                        );
                       })}
                   </Swiper>
                 </TabsContent>
