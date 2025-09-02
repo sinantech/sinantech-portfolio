@@ -148,11 +148,15 @@ const work = () => {
             })}
           </TabsList>
           {/* tabs content */}
-          <div>
+          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible">
             {categories.map((category) => {
               return (
                 <TabsContent key={category} value={category}>
-                  <Swiper>
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{ clickable: true, dynamicBullets: true }}
+                    className="h-max xl:h-[460px]"
+                  >
                     {projects
                       .filter((project) => project.category === category)
                       .map((project) => {
@@ -180,7 +184,7 @@ const work = () => {
                                   </ul>
                                 </div>
                                 {/* btns */}
-                                <div>
+                                <div className="flex flex-col sm:flex-row gap-4 items-start">
                                   <Link href={project.link}>
                                     <button className="btn btn-sm btn-accent flex gap-2">
                                       <MdArrowOutward className="text-xl" />

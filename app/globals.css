@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "tailwind-scrollbar";
 
 @theme {
   /* breakpoints */
@@ -52,7 +53,7 @@ body {
 }
 
 .btn-sm {
-  @apply min-w-[168px] px-5 text-[15px] font-semibold;
+  @apply min-w-[162px] px-5 text-[15px] font-semibold;
 }
 
 .btn-lg {
