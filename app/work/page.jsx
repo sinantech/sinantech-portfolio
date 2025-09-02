@@ -30,83 +30,83 @@ const projects = [
   },
   {
     id: 2,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "fullstack",
+    title: "Nextfolio Portfolio Site",
+    description: "Next.js Portfolio Site",
     image: "/assets/work/thumb2.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["Next.js", "Tailwind CSS", "Shadcn UI"],
   },
   {
     id: 3,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "fullstack",
+    title: "Authboard Deashboard",
+    description: "Mern app with authentication",
     image: "/assets/work/thumb3.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["Express", "Mongodb", "React", "Node.js"],
   },
   {
     id: 4,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "fullstack",
+    title: "Chatsync Platform",
+    description: "Real time MERN app with chat functionality",
     image: "/assets/work/thumb4.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["mern", "Socket.io", "Redux"],
   },
   {
     id: 5,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "uiux",
+    title: "flowomobile app design",
+    description: "mobile firs figma design",
     image: "/assets/work/thumb1.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["figma", "adobde xd"],
   },
   {
     id: 6,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "uiux",
+    title: "shopease dashboard redesign",
+    description: "redesign of e-commerce dashboard",
     image: "/assets/work/thumb2.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["whimsical", "figma", "Framer"],
   },
   {
     id: 7,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "branding",
+    title: "brewhaus brand identity",
+    description: "a bold and earthy visual identity for a modern coffee brand",
     image: "/assets/work/thumb3.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["illustrator", "photoshop", "figma"],
   },
   {
     id: 8,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "branding",
+    title: "lunaskin luxury branding",
+    description: "elegant branding for a premium skincare product line ",
     image: "/assets/work/thumb4.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["figma", "photoshop", "canva"],
   },
   {
     id: 9,
-    category: "frontend",
-    title: "Launchwave Landing Page",
-    description: "React + Tailwind Landing Page",
+    category: "branding",
+    title: "novatach brand kit",
+    description: "full brand for a tech startup including logo and brand look",
     image: "/assets/work/thumb1.png",
     link: "",
     github: "",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    tech: ["illustrator", "figma", "notion"],
   },
 ];
 
@@ -133,19 +133,36 @@ const work = () => {
           defaultValue="frontend"
           className="w-full flex flex-col gap-6 xl:gap-12"
         >
+          {/* tabslist */}
           <TabsList className="flex flex-wrap justify-center items-center gap-4 h-full mb-04 xl:mb-0">
             {categories.map((category) => {
               return (
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="capitalize border border-white/10 data-[state=active]:bg-accent data-[state=actvie]:border-accent h-[48px] px-6 rounded-full"
+                  className="capitalize border border-white/10 data-[state=active]:bg-accent data-[state=actvie]:border-accent h-[48px] px-6 rounded-full cursor-pointer"
                 >
-                  {category}
+                  {category === "uiux" ? "UI UX Design" : category}
                 </TabsTrigger>
               );
             })}
           </TabsList>
+          {/* tabs content */}
+          <div>
+            {categories.map((category) => {
+              return (
+                <TabsContent key={category} value={category}>
+                  <Swiper>
+                    {projects
+                      .filter((project) => project.category === category)
+                      .map((project) => {
+                        return <SwiperSlide>{project.title}</SwiperSlide>;
+                      })}
+                  </Swiper>
+                </TabsContent>
+              );
+            })}
+          </div>
         </Tabs>
       </div>
     </motion.section>
