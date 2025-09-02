@@ -2,6 +2,20 @@
 
 import { motion } from "framer-motion";
 
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+//tabs
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import Link from "next/link";
+import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+
 const work = () => {
   return (
     <motion.section
