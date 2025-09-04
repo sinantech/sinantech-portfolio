@@ -35,7 +35,34 @@ const contact = () => {
             {/* info text */}
             <div>info text</div>
             {/* form */}
-            <div>form</div>
+            <div className="flex-1">
+              <form>
+                <div className="flex flex-col xl:flex-row gap-6 w-full">
+                  <div className="w-full">
+                    <Label htmlFor="name">
+                      Firstname <span className="text-accent">*</span>
+                    </Label>
+                    <Input
+                      id="firstname"
+                      name="firstname"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div className="w-full">
+                    <Label htmlFor="name">
+                      Lastname <span className="text-accent">*</span>
+                    </Label>
+                    <Input
+                      id="lastname"
+                      name="lastname"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
