@@ -37,6 +37,7 @@ const contact = () => {
             {/* form */}
             <div className="flex-1">
               <form>
+                {/* first and last name */}
                 <div className="flex flex-col xl:flex-row gap-6 w-full">
                   <div className="w-full">
                     <Label htmlFor="name">
@@ -60,6 +61,18 @@ const contact = () => {
                       required
                     />
                   </div>
+                </div>
+                {/* email */}
+                <div className="w-full">
+                  <Label htmlFor="name">
+                    Email <span className="text-accent">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    placeholder="youremail@mail.com"
+                    required
+                  />
                 </div>
               </form>
             </div>
