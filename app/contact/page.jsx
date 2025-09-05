@@ -34,7 +34,34 @@ const contact = () => {
         <div className="w-full">
           <div className="flex flex-col xl:flex-row gap-6">
             {/* info text */}
-            <div>info text</div>
+            <div className="flex-1 xl:w-[600px] flex flex-col gap-12">
+              <div>
+                <h2 className="h2 mb-6">
+                  Get In <span className="text-accent">Touch</span>
+                </h2>
+                <p className="max-w-[460px]">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolor, debitis.
+                </p>
+              </div>
+              {/* info */}
+              <div>
+                {/* phone */}
+                <div className="flex items-center gap-4 text-lg">
+                  <span className="text-accent">
+                    <HiOutlinePhone className="text-2xl" />
+                  </span>
+                  <span>+11 22 33 44 55</span>
+                </div>
+                {/* email */}
+                <div className="flex items-center gap-4 text-lg">
+                  <span className="text-accent">
+                    <HiOutlineMail className="text-2xl" />
+                  </span>
+                  <span>jake@gmail.com</span>
+                </div>
+              </div>
+            </div>
             {/* form */}
             <div className="flex-1">
               <form className="flex flex-col gap-6 items-start">
@@ -105,8 +132,15 @@ const contact = () => {
                     placeholder="Write Your Message..."
                     className="min-h-[160px] bg-white/5 border-white/10
                   focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4 selection:bg-accent placeholder:text-wihte/50"
-                  ></Textarea>
+                  />
                 </div>
+                {/* btn */}
+                <button className="btn btn-lg btn-accent">
+                  <div className="flex items-center gap-3">
+                    <span className="font-medium">Send Message</span>
+                    <HiOutlineArrowLongRight className="text-xl" />
+                  </div>
+                </button>
               </form>
             </div>
           </div>
