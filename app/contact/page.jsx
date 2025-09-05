@@ -36,7 +36,7 @@ const contact = () => {
             <div>info text</div>
             {/* form */}
             <div className="flex-1">
-              <form>
+              <form className="flex flex-col gap-6 items-start">
                 {/* first and last name */}
                 <div className="flex flex-col xl:flex-row gap-6 w-full">
                   <div className="w-full">
@@ -73,6 +73,20 @@ const contact = () => {
                     placeholder="youremail@mail.com"
                     required
                   />
+                </div>
+                {/* select */}
+                <div className="w-full">
+                  <Label htmlFor="name">
+                    I'm interested in <span className="text-accent">*</span>
+                  </Label>
+                  <Select name="service" required>
+                    <SelectTrigger
+                      id="service"
+                      className="w-full !h-12 bg-white/5 border-white/10 px-4"
+                    >
+                      <SelectValue placeholder="Choose Here" />
+                    </SelectTrigger>
+                  </Select>
                 </div>
               </form>
             </div>
