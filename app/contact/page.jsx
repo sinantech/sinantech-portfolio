@@ -17,7 +17,17 @@ import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 
 const contact = () => {
-  return <motion.section></motion.section>;
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+    >
+      contact
+    </motion.section>
+  );
 };
 
 export default contact;
