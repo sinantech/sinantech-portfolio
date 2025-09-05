@@ -35,6 +35,7 @@ const contact = () => {
           <div className="flex flex-col xl:flex-row gap-6">
             {/* info text */}
             <div className="flex-1 xl:w-[600px] flex flex-col gap-12">
+              {/* text */}
               <div>
                 <h2 className="h2 mb-6">
                   Get In <span className="text-accent">Touch</span>
@@ -45,7 +46,7 @@ const contact = () => {
                 </p>
               </div>
               {/* info */}
-              <div>
+              <div className="flex flex-col gap-8 mb-6 xl:mb-0">
                 {/* phone */}
                 <div className="flex items-center gap-4 text-lg">
                   <span className="text-accent">
@@ -59,6 +60,13 @@ const contact = () => {
                     <HiOutlineMail className="text-2xl" />
                   </span>
                   <span>jake@gmail.com</span>
+                </div>
+                {/* location */}
+                <div className="flex items-center gap-4 text-lg">
+                  <span className="text-accent">
+                    <HiOutlineMapPin className="text-2xl" />
+                  </span>
+                  <span>255 Street,UK</span>
                 </div>
               </div>
             </div>
